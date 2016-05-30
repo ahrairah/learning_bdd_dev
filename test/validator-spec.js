@@ -20,10 +20,10 @@ describe('A Validator', function () {
     });
     describe('will include error.three for divisible by 3 numbers:', function () {
         it('like 3', function () {
-            expect(validator(3)).to.be.deep.equal('error.three');
+            expect(validator(3)).to.include('error.three');
         });
         it('like 6', function () {
-            expect(validator(6)).to.be.deep.equal('error.three');
+            expect(validator(6)).to.include('error.three');
         });
         it('like 15', function () {
             expect(validator(15)).to.include(['error.three']);
@@ -31,10 +31,10 @@ describe('A Validator', function () {
     });
     describe('will include error.five for divisible by 5 numbers:', function () {
         it('like 5', function () {
-            expect(validator(5)).to.be.deep.equal('error.five');
+            expect(validator(5)).to.include('error.five');
         });
         it('like 10', function () {
-            expect(validator(10)).to.be.deep.equal('error.five');
+            expect(validator(10)).to.include('error.five');
         });
         it('like 15', function () {
             expect(validator(15)).to.inlude('error.five');
