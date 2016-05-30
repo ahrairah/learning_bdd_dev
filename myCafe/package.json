@@ -1,0 +1,17 @@
+{
+  "name": "mycafe",
+  "version": "1.0.0",
+  "description": "Core of a cafe ordering system",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -u bdd -R spec -t 500 --recursive"
+  },
+  "author": "Tony Meyer",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  }
+}
