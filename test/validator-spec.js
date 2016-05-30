@@ -9,12 +9,15 @@ describe('A Validator', function () {
     it('will return no errors for valid numbers', function () {
         expect(validator(7)).to.be.empty;
     });
+    it('will return one error for each rule the number violates', function () {
+        expect(validator(15)).to.be.deep.equal(['error.three', 'error.five']);
+    });
     describe('will return error.nonpositive for not strictly positive numbers:', function () {
-        it('will return error.nonpositive for not strictly postitive numbers, like 0', function () {
+        it('like 0', function () {
             expect(validator(0)).to.be.deep.equal(['error.nonpositive']);
         });
 
-        it('will return error.nonpositive for not strictly positive numbers, like -2', function () {
+        it('like -2', function () {
             expect(validator(-2)).to.be.deep.equal(['error.nonpositive']);
         });
     });
