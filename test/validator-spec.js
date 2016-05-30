@@ -37,7 +37,7 @@ describe('A Validator', function () {
             expect(validator(10)).to.include('error.five');
         });
         it('like 15', function () {
-            expect(validator(15)).to.inlude('error.five');
+            expect(validator(15)).to.include('error.five');
         });
     });
 
