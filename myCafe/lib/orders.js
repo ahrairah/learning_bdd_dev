@@ -3,7 +3,7 @@ function orderSystemWith (daos) {
     display: function (orderId, func) {
       var result;
       if(typeof orderId !== 'number'){
-        var result = {items: [], totalPrice: 0,
+        result = {items: [], totalPrice: 0,
         actions: [
           {
             action: 'append-beverage',
