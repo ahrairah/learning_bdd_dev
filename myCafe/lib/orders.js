@@ -1,8 +1,9 @@
 function orderSystemWith (daos) {
+  var result;
   var orderSystem = {
-    display: function (orderId) {
+    display: function (orderId, err, res) {
       if(typeof orderId !== 'number'){
-        res = {items: [], totalPrice: 0,
+        result = {items: [], totalPrice: 0,
         actions: [
           {
             action: 'append-beverage',
@@ -14,7 +15,7 @@ function orderSystemWith (daos) {
           }
         ]};
       }
-      return null, res;
+      return null, result;
     }
   };
   return orderSystem;
