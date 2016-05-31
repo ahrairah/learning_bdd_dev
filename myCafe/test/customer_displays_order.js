@@ -18,7 +18,7 @@ describe('Customer displays order', function () {
         var result;
         beforeEach(function (done) {
           this.orderId = 'some empty order id';
-          this.orderDAO.byId.withArgs(this.orderId).callsArgWithAsynch(1, null, []);
+          this.orderDAO.byId.withArgs(this.orderId).callsArgWithAsync(1, null, []);
           this.orderSystem.display(this.orderId, function (err, res) {
             result = res;
             done(err);
