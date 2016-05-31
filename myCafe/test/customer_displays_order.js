@@ -18,18 +18,23 @@ describe('Customer displays order', function () {
         // this.result = this.orderSystem.display(this.orderId);
         var result;
         beforeEach(function (done) {
-          this.orderId = 'some empty order id'
+          this.orderId = 'some empty order id';
+          this.orderDAO.byId.withArgs(this.orderId).callsArgWithAsynch(1, null, []);
+          this.orderSystem.display(this.orderId, function (err, res) {
+            result = res;
+            done(err);
+          });
         });
       });
         it('will show no order items', function () {
-          expect(this.result).to.have.property('items').that.is.empty;
+          expect(result).to.have.property('items').that.is.empty;
         });
 
         it('will show 0 as the total price', function () {
-          expect(this.result).to.have.property('totalPrice').that.is.equal(0);
+          expect(result).to.have.property('totalPrice').that.is.equal(0);
         });
         it('will only be possible to add a beverage', function () {
-          expect(this.result).to.have.property('actions').that.is.deep.equal([{
+          expect(result).to.have.property('actions').that.is.deep.equal([{
             action: 'append-beverage',
             target: this.orderId,
             parameters: {
