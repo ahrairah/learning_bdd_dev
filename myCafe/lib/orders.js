@@ -2,7 +2,7 @@ function orderSystemWith (daos) {
   var orderSystem = {
     display: function (daos) {
       if(daos.orderId === 'some empty order id'){
-        this.items = {};
+        this.result.items = {};
       }
       return items;
     }
