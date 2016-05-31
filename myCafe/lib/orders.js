@@ -14,8 +14,7 @@ function orderSystemWith (daos) {
           }
         ]};
       }
-      var done = true;
-      return res, done;
+      return null, res;
     }
   };
   return orderSystem;
