@@ -1,6 +1,6 @@
 function orderSystemWith (daos) {
   var orderSystem = {
-    display: function (orderId) {
+    display: function (orderId, func) {
       var result;
       if(typeof orderId !== 'number'){
         var result = {items: [], totalPrice: 0,
@@ -15,7 +15,8 @@ function orderSystemWith (daos) {
           }
         ]};
       }
-      return result;
+      var done = true;
+      return res, done;
     }
   };
   return orderSystem;

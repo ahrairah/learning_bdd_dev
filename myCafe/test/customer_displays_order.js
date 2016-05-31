@@ -13,17 +13,17 @@ describe('Customer displays order', function () {
   });
     context('Given that the order is empty', function () {
 
-        // var result;
-        beforeEach(function () {
-          this.orderId = 'some empty order id';
-          this.orderDAO.byId.withArgs(this.orderId).returns([]);
-          this.result = this.orderSystem.display(this.orderId);
+        var result;
+        beforeEach(function (done) {
           // this.orderId = 'some empty order id';
-          // this.orderDAO.byId.withArgs(this.orderId).callsArgWithAsync(1, null, []);
-          // this.orderSystem.display(this.orderId, function (err, res) {
-          //   result = res;
-          //   done(err);
-          // });
+          // this.orderDAO.byId.withArgs(this.orderId).returns([]);
+          // this.result = this.orderSystem.display(this.orderId);
+          this.orderId = 'some empty order id';
+          this.orderDAO.byId.withArgs(this.orderId).callsArgWithAsync(1, null, []);
+          this.orderSystem.display(this.orderId, function (err, res) {
+            result = res;
+            done(err);
+          });
         });
         it('will show no order items', function () {
           expect(this.result).to.have.property('items').that.is.empty;
