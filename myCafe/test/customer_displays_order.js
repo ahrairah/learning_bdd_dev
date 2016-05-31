@@ -6,7 +6,7 @@ var chai = require('chai'),
 
 describe('Customer displays order', function () {
   beforeEach(function () {
-    var orderDAO = {
+    this.orderDAO = {
       byId: sinon.stub()
     };
       this.orderSystem = orderSystemWith(this.orderDAO);
