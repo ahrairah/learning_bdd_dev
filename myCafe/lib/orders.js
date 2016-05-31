@@ -1,5 +1,7 @@
 function orderSystemWith (daos) {
-  return [];
+  return function display () {
+    
+  };
 }
 
 module.exports = function (daos) {
