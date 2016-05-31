@@ -1,8 +1,8 @@
 function orderSystemWith (daos) {
   var orderSystem = {
-    display: function (daos) {
+    display: function (orderId) {
       var result;
-      if(daos.orderId === 'some empty order id'){
+      if(orderId === 'some empty order id'){
         var result = {items: []}
       }
       return result;
