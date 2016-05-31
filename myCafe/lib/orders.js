@@ -1,6 +1,6 @@
 function orderSystemWith (daos) {
   var orderSystem = {
-    display: function (orderId, func(err, res)) {
+    display: function (orderId) {
       if(typeof orderId !== 'number'){
         res = {items: [], totalPrice: 0,
         actions: [
