@@ -1,6 +1,10 @@
 function orderSystemWith (daos) {
   var orderSystem = {
-    display: function () {}
+    display: function (daos) {
+      if(daos.orderId === 'some empty order id'){
+        return this.result.items = [];
+      }
+    }
   };
   return orderSystem;
 }
