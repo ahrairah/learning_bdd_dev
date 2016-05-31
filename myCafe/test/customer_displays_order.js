@@ -12,7 +12,6 @@ describe('Customer displays order', function () {
       this.orderSystem = orderSystemWith(this.orderDAO);
   });
     context('Given that the order is empty', function () {
-      beforeEach(function () {
         // this.orderId = 'some empty order id';
         // this.orderDAO.byId.withArgs(this.orderId).returns([]);
         // this.result = this.orderSystem.display(this.orderId);
@@ -25,7 +24,6 @@ describe('Customer displays order', function () {
             done(err);
           });
         });
-      });
         it('will show no order items', function () {
           expect(result).to.have.property('items').that.is.empty;
         });
