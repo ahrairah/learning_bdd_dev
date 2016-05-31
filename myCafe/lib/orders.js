@@ -2,7 +2,7 @@ function orderSystemWith (daos) {
   var orderSystem = {
     display: function (orderId) {
       var result;
-      if(orderId === 'some empty order id'){
+      if(typeof orderId !== 'number'){
         var result = {items: [], totalPrice: 0,
         actions: [
           {
@@ -21,5 +21,5 @@ function orderSystemWith (daos) {
   return orderSystem;
 }
 module.exports = function (daos) {
-  return orderSystemWith(daos)
+  return orderSystemWith(daos);
 };
