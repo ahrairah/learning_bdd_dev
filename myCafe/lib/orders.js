@@ -1,8 +1,6 @@
 function orderSystemWith (daos) {
-  return function display () {
-    
-  };
-}
+
+  return {display: function () {}};
 
 module.exports = function (daos) {
   return orderSystemWith(daos)
