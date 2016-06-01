@@ -10,7 +10,13 @@ chai.use(require('chai-as-promised'));
 module.exports = function () {
   this.World = require('../support/world.js');
   this.Given(/^that the order is empty$/, function (cb) {
-    cb(null, 'pending');
+    this.order = this.orderStorage.alreadyConains(order.empty());
+    this.messages = this.messageStorage.alreadyConains({
+      id: this.order.id,
+      data: []
+    });
+    this.messageStorage.updateWillNotFail();
+    cb();
   });
   this.When(/^the customer displays the order$/, function (cb) {
     cb(null, 'pending');
