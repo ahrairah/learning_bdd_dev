@@ -7,7 +7,7 @@ module.exports = function () {
   this.When(/^the customer displays the order$/, function (cb) {
     cb.pending();
   });
-  this.Then(/^no order items will be displayed$/, function (cb) {
+  this.Then(/^no order items will be shown$/, function (cb) {
     cb.pending();
   });
   this.Then(/^"([^"]*)" will be shown as total price$/, function (expectedTotalPrice, cb) {
