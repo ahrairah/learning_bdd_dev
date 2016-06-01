@@ -9,5 +9,5 @@ module.exports = function (cb) {
     order: world.orderStorage.dao(),
     message: world.messageStorage.dao()
   });
-  cd(world);
+  cb(world);
 };
