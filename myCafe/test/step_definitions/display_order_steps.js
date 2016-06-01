@@ -8,7 +8,7 @@ chai.use(require('sinon-chai'));
 chai.use(require('chai-as-promised'));
 
 module.exports = function () {
-  this.World = require('../Support/world.js');
+  this.World = require('../support/world.js');
   this.Given(/^that the order is empty$/, function (cb) {
     cb(null, 'pending');
   });
