@@ -22,7 +22,7 @@ describe('Customer displays order', function () {
           this.orderDAO.byId.withArgs(this.orderId).callsArgWithAsync(1, null, []);
           this.orderSystem.display(this.orderId, function (err, res) {
             result = res;
-            this.done(err);
+            done(err);
           });
         });
         it('will show no order items', function () {
