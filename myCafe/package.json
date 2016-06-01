@@ -1,7 +1,7 @@
 {
   "name": "mycafe",
   "version": "1.0.0",
-  "description": "Core of a cafe ordering system",
+  "description": "Sample for BDD with js",
   "main": "index.js",
   "scripts": {
     "test": "mocha -u bdd -R spec -t 500 --recursive"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3",
+    "chai-as-promised": "^5.3.0",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0"
   }
