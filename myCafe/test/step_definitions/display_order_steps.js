@@ -1,8 +1,8 @@
 'use strict'
 
 module.exports = function () {
-  this.Given(/^that the order is empty$/, function (cb) {
-    cb.pending();
+  this.Given(/^that the order is empty$/, function (callback) {
+    callback(null, 'pending');
   });
   this.When(/^the customer displays the order$/, function (cb) {
     cb.pending();
