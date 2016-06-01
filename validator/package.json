@@ -15,5 +15,8 @@
     "pug": "^2.0.0-alpha8",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
