@@ -15,5 +15,5 @@ module.exports = function () {
   });
   this.Then(/^there will only be the possibility to add a beverage$/, function (cb) {
     cb.pending();
-  })
+  });
 };
