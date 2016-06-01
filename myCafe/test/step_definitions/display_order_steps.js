@@ -1,6 +1,14 @@
 'use strict'
 
+var chai = require('chai');
+var expect = chai.expect;
+var order = require('../support/examples/orders');
+
+chai.use(require('sinon-chai'));
+chai.use(require('chai-as-promised'));
+
 module.exports = function () {
+  this.World = require('../Support/world.js');
   this.Given(/^that the order is empty$/, function (cb) {
     cb.pending();
   });
@@ -16,4 +24,4 @@ module.exports = function () {
   this.Then(/^there will only be the possibility to add a beverage$/, function (cb) {
     cb.pending();
   });
-};
+}
