@@ -4,7 +4,7 @@
   "description": "Sample for BDD with js",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber.js --format pretty"
+    "test": "cucumber.js --format pretty --require test/step_definitions/"
   },
   "author": "Tony Meyer",
   "license": "ISC",
